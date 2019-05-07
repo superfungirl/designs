@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+html, body{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+
+
+}
+
+$colors: (
+    primary: #D7AEFB,
+    accent: #fbd6ae,
+    dark: #919192,
+    light: #333,
+    hover: #222225,
+    lighter: #ffffff
+);
+
+@function colour($name-color){
+    @return map-get($colors, $name-color);
+}
+
+
+.nav{
+    width: 100%;
+    background: colour(lighter);
+    // overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+    color: colour(dark);
+    font-size: 17px;
+
+
+    p{
+        float: left;
+        padding: 14px 16px;
+        margin-left: 100px;
+    }
+
+    a{
+        display: inline-block;
+        padding: 14px 16px;
+        text-decoration: none;
+        color: colour(dark);
+    }
+
+    a.active{
+        border-bottom: 2px solid colour(hover);
+    }
+
+    a:hover{
+        color:colour(hover);
+    }
+
+    .right-nav{
+        float: right;
+        list-style-type: none;
+        margin-right: 100px;
+    }
+}
+
+.main{
+    color: colour(hover);
+    .content-left{
+        width: 30%;
+        float: left;
+        margin: 100px 0 0 100px;
+
+
+        h1{
+            font-size:50px;
+            line-height: 75.6px;
+        }
+        h2{
+            font-size: 22px;
+            line-height: 34px;
+            color: colour(dark);
+            padding: 40px 0;
+        }
+        .button{
+            background: colour(accent);
+            border: none;
+            padding: 15px 32px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            width: 50%;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+    }
+
+    .content-right{
+        width: 60%;
+        float: right;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+
+        .column{
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+
+            img{
+                width: 100%;
+                margin-top: 8px;
+                vertical-align: middle;
+            }
+        }
+        
+    }
+}
