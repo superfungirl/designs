@@ -10,8 +10,7 @@ html, body{
     width: 100%;
     height: 100%;
     background: #fff;
-
-
+    color: #919192;
 }
 
 $colors: (
@@ -68,10 +67,14 @@ $colors: (
 
 .main{
     color: colour(hover);
+    overflow: auto;
+    padding-bottom: 50px;
+    padding-left: 100px;
+
     .content-left{
         width: 30%;
         float: left;
-        margin: 100px 0 0 100px;
+        margin: 100px 0 0 0;
 
 
         h1{
@@ -79,22 +82,60 @@ $colors: (
             line-height: 75.6px;
         }
         h2{
-            font-size: 22px;
+            font-size: 20px;
             line-height: 34px;
             color: colour(dark);
             padding: 40px 0;
+            font-weight: lighter;
         }
+
+        .btn{
+            outline: none;
+        }
+
         .button{
             background: colour(accent);
             border: none;
             padding: 15px 32px;
+            display: inline-block;
+            text-decoration: none;
+            // float: left;
+            margin-left: 10px;
             cursor: pointer;
             font-size: 16px;
             text-align: center;
-            width: 50%;
-            border-radius: 10px;
+            // width: 50%;
             margin: 0 auto;
         }
+
+        .button-left{
+            background: colour(lighter);
+            border: 2px solid colour(accent);
+            padding: 15px 32px;
+            display: inline-block;
+            text-decoration: none;
+            // float: right;
+            margin-left: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            margin: 0 10px;
+            // width: 30%;
+
+        }
+
+        .button:hover{
+            border: 2px solid colour(accent);
+            background: transparent;
+        }
+        .button-left:hover{
+            border: none;
+        }
+
+        .btn:focus{
+            color: currentColor;
+        }
+
     }
 
     .content-right{
@@ -117,4 +158,12 @@ $colors: (
         }
         
     }
+}
+
+.wardrobe{
+    background: colour(accent);
+    color: colour(hover);
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
 }
